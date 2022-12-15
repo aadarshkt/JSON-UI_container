@@ -11,7 +11,7 @@
       "uiType": "Input",
       "icon": "",
       "level": 0,
-      "placeholder": ""
+      "placeholder": "Enter Pasta Name"
     },
     {
       "sort": 10001,
