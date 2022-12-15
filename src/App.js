@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import jsonData from "./data.json";
+import Editor from "./Editor";
+import Ui from "./Ui";
 
-function App() {
+const App = () => {
+  const [data, setData] = useState(JSON.parse(JSON.stringify(jsonData)));
+  console.log(data);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <p>Hello</p>
+      <Editor value={data} setValue={setData} />
+      <Ui data={data}></Ui>
     </div>
   );
-}
+};
 
 export default App;
